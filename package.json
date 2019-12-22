@@ -1,0 +1,43 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "description": "fullstack app with angular and express",
+  "main": "index.js",
+  "engines": {
+    "node": "10.14.1",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client-install": "npm install --prefix client",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build --prefix-client"
+  },
+  "keywords": [
+    "express",
+    "angular"
+  ],
+  "author": "Mrachko Ihar",
+  "license": "ISC",
+  "dependencies": {
+    "@types/source-map": "^0.5.7",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.8.2",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "concurrently": "^5.0.2",
+    "nodemon": "^2.0.2"
+  }
+}
