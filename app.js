@@ -38,11 +38,11 @@ app.use('/api/order', orderRotes);
 app.use('/api/position', positionRotes);
 
 if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('/client/dist/client'));
+    app.use(express.static(__dirname +'dist/client'));
     app.get('*', (req, res) =>{
         res.sendFile(
             path.join(
-            __dirname, "./client/dist/client/index.html"
+            __dirname, "client", "dist", "client", "index.html"
             )
         )
     })
