@@ -38,8 +38,9 @@ app.use('/api/order', orderRotes);
 app.use('/api/position', positionRotes);
 
 
-app.use(bodyParser.json());
-const distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
+app.use(express.static(__dirname + 'dist'));
+app.all('*', (req, res) => {
+    res.status(200).sendFile(__dirname + 'client/dist/client/index.html')
+})
 
 module.exports = app;
