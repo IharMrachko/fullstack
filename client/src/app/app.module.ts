@@ -55,7 +55,7 @@ import {APP_BASE_HREF} from "@angular/common";
     provide: HTTP_INTERCEPTORS,
     multi: true,
     useClass: TokenInterceptor
-  },{provide: APP_BASE_HREF, useValue : '/' }],
+  },{provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
