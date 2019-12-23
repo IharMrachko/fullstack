@@ -38,7 +38,7 @@ app.use('/api/order', orderRotes);
 app.use('/api/position', positionRotes);
 
 
-app.use(express.static(__dirname + 'dist'));
+app.use(express.static(__dirname + '/dist'));
 app.all('*', (req, res) => {
     res.status(200).sendFile(__dirname + 'client/dist/client/index.html')
 })
