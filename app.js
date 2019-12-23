@@ -37,14 +37,9 @@ app.use('/api/category', categoryRotes);
 app.use('/api/order', orderRotes);
 app.use('/api/position', positionRotes);
 
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static("/dist/client"));
-    app.get('*', (req, res) =>{
-        res.sendFile(
-            path.resolve(
-            __dirname, "client", "dist", "client", "index.html"
-            )
-        )
-    })
-}
+
+app.use(bodyParser.json());
+const distDir = __dirname + "/dist/client";
+app.use(express.static(distDir));
+
 module.exports = app;
