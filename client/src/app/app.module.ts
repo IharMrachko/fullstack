@@ -22,6 +22,7 @@ import { OrderCategoriesComponent } from './order-page/order-categories/order-ca
 import { OrderPositionsComponent } from './order-page/order-positions/order-positions.component';
 import { HistoryListComponent } from './history-page/history-list/history-list.component';
 import { HistoryFilterComponent } from './history-page/history-filter/history-filter.component';
+import {APP_BASE_HREF} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { HistoryFilterComponent } from './history-page/history-filter/history-fi
     provide: HTTP_INTERCEPTORS,
     multi: true,
     useClass: TokenInterceptor
-  }],
+  },{provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

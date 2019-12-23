@@ -1046,6 +1046,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _order_page_order_positions_order_positions_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./order-page/order-positions/order-positions.component */ "./src/app/order-page/order-positions/order-positions.component.ts");
 /* harmony import */ var _history_page_history_list_history_list_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./history-page/history-list/history-list.component */ "./src/app/history-page/history-list/history-list.component.ts");
 /* harmony import */ var _history_page_history_filter_history_filter_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./history-page/history-filter/history-filter.component */ "./src/app/history-page/history-filter/history-filter.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+
 
 
 
@@ -1105,7 +1107,7 @@ var AppModule = /** @class */ (function () {
                     provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HTTP_INTERCEPTORS"],
                     multi: true,
                     useClass: _shared_classes_token_interceptor__WEBPACK_IMPORTED_MODULE_11__["TokenInterceptor"]
-                }],
+                }, { provide: _angular_common__WEBPACK_IMPORTED_MODULE_24__["APP_BASE_HREF"], useValue: '/' }],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
