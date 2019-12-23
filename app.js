@@ -39,7 +39,7 @@ app.use('/api/position', positionRotes);
 
 
 app.use(bodyParser.json());
-const distDir = __dirname + "/dist/client";
+const distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
 module.exports = app;
