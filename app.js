@@ -39,12 +39,12 @@ app.use('/api/position', positionRotes);
 
 
 if(process.env.NODE_ENV === 'production'){
-    const distDir = __dirname + "client/dist/client";
+    const distDir = __dirname + "client/dist";
     app.use(express.static(distDir));
     app.get('*', (req, res)=>{
         res.sendFile(
             path.resolve(
-                __dirname, 'client', 'dist', 'client', 'index.html'
+                __dirname, 'client', 'dist', 'index.html'
             )
         )
     })
